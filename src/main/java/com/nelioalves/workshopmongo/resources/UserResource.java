@@ -47,4 +47,12 @@ public class UserResource {
 
         return ResponseEntity.noContent().build();
     }
+
+    @RequestMapping(method = RequestMethod.PUT)
+    public ResponseEntity<UserDTO> update(@RequestBody UserDTO dto) {
+        User user = userService.fromDTO(dto);
+        user = userService.update(user);
+
+        return ResponseEntity.ok().body(new UserDTO(user));
+    }
 }
