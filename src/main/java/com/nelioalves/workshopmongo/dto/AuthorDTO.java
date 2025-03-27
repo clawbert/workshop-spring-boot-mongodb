@@ -3,7 +3,6 @@ package com.nelioalves.workshopmongo.dto;
 import com.nelioalves.workshopmongo.domain.User;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 public class AuthorDTO implements Serializable {
 
